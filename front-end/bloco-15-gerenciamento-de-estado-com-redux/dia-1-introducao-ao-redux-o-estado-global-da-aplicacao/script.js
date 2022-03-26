@@ -66,12 +66,11 @@ function criaColor () {
 
 store.subscribe(()=> {
  const randomColor = criaColor();
- console.log(randomColor);
+
  const { colors, index } = store.getState();
  document.getElementById('value').innerHTML = colors[index];
  const container = document.getElementById('container');
  container.style.backgroundColor = colors[index];
-
- console.log(store.getState().colors);
+ 
 })
 
